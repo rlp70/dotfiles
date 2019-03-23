@@ -1,0 +1,5 @@
+# No exe files
+*.exe
+
+# emacs modded files
+*~
