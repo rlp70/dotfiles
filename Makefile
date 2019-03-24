@@ -1,4 +1,4 @@
-#1-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 # Robert's dotfiles Makefile
 # - Creates symlinks for a thin .bashrc to reference and source these files
 # - Makes things super-painless, too. To install the dotfiles on a new
