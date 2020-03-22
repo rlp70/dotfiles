@@ -101,31 +101,6 @@
 ;; And map "M-u" to 'toggle-evilmode
 (global-set-key (kbd "M-u") 'toggle-evilmode)
 
-;; Use "C-c m" to call 'make' without leaving emacs
-(defun do-make()
-  "Function wrapper to run 'make' in the current directory from emacs"
-  (interactive)
-  (compile "make")
-  (other-window 1))
-(global-set-key (kbd "C-c m") 'do-make)
-
-;; Auto-complete
-;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
-;; Screenwriter Mode
-;; - Was playing with this. I'll remove it later.
-;; 
-(add-to-list 'load-path "~/elisp")
-;;(require 'screenwriter)
-;;(global-set-key (kbd ">f1<") 'screenwriter-mode)
-;;(setq auto-mode-alist (cons '("\\.scp" . screenwriter-mode) auto-mode-alist))
-;;(setq auto-mode-alist (cons '("\\.screenplay" . screenwriter-mode) auto-mode-alist))
-;;
-;; Fountain Mode
-(require 'fountain-mode)
-(setq auto-mode-alist (cons '("\\.scp" . fountain-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.screenplay" . fountain-mode) auto-mode-alist))
-
 ;; Some of my "professional" emacs quirks
 ;;
 ;; Braces on the next line, tabs=2 spaces
@@ -144,3 +119,37 @@
 ;; - Can vary by organization & machine
 ;; - Do it last to overwrite/unset anything they may want me to do.
 (load "~/.emacs.d/work_config.el" t)
+
+;; Auto-complete
+;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
+;; Screenwriter Mode
+;; - Was playing with this. I'll remove it later.
+;; 
+(add-to-list 'load-path "~/elisp")
+;;(require 'screenwriter)
+;;(global-set-key (kbd ">f1<") 'screenwriter-mode)
+;;(setq auto-mode-alist (cons '("\\.scp" . screenwriter-mode) auto-mode-alist))
+;;(setq auto-mode-alist (cons '("\\.screenplay" . screenwriter-mode) auto-mode-alist))
+;;
+;; Fountain Mode
+(require 'fountain-mode)
+(setq auto-mode-alist (cons '("\\.scp" . fountain-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.screenplay" . fountain-mode) auto-mode-alist))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-checkbox-hierarchical-statistics nil)
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://stable.melpa.org/packages/"))))
+ '(package-selected-packages (quote (ledger-mode auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
