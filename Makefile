@@ -40,7 +40,11 @@ dotfiles:
         do \
 	  f=$$(basename $$file); \
 	  if [ -f $(HOME)/$$f ] ; then \
-	    mv $(HOME)/$$f $(HOME)/$$f.old; \
+	    if [ -h $(HOME)/$$f ] ; then \
+	      continue; \
+	    else \
+	      mv $(HOME)/$$f $(HOME)/$$f.old; \
+	    fi; \
 	  fi; \
 	  ln -sfn $$file $(HOME)/$$f;\
 	done;
