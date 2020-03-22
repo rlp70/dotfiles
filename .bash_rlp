@@ -1,0 +1,26 @@
+###
+# My .bashrc file
+#
+# Plenty of companies end up reserving .bashrc to source their various
+# workplace tools and what-not. So, this file is a way to do all of my
+# aliases without overwriting .bashrc.
+#
+# Add 'source ~/.bash_rlp' to use this.
+
+###
+# My "everyday" aliases
+#
+# - Use '..' to move up a level, b/c lazy
+# - 'peek' directories, b/c that's easier to type than 'pushd'
+# - emacs, non-gui mode, as my editor
+# - Remove emacs '*~' files with 'clean'
+#
+alias ..='cd ../'
+alias peek='pushd'
+alias edit='emacs -nw'
+alias clean='rm *~'
+
+###
+# git stuff
+#
+alias git_tree='git log --graph --pretty=oneline --abbrev-commit'
