@@ -101,6 +101,17 @@
 ;; And map "M-u" to 'toggle-evilmode
 (global-set-key (kbd "M-u") 'toggle-evilmode)
 
+;; Use "C-c m" to call 'make' without leaving emacs
+(defun do-make()
+  "Function wrapper to run 'make' in the current directory from emacs"
+  (interactive)
+  (compile "make")
+  (other-window 1))
+(global-set-key (kbd "C-c m") 'do-make)
+
+;; Auto-complete
+;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 ;; Screenwriter Mode
 ;; - Was playing with this. I'll remove it later.
 ;; 
