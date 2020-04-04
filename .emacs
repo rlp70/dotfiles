@@ -133,9 +133,9 @@
 ;;(setq auto-mode-alist (cons '("\\.screenplay" . screenwriter-mode) auto-mode-alist))
 ;;
 ;; Fountain Mode
-(require 'fountain-mode)
-(setq auto-mode-alist (cons '("\\.scp" . fountain-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.screenplay" . fountain-mode) auto-mode-alist))
+;;(require 'fountain-mode)
+;;(setq auto-mode-alist (cons '("\\.scp" . fountain-mode) auto-mode-alist))
+;;(setq auto-mode-alist (cons '("\\.screenplay" . fountain-mode) auto-mode-alist))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
