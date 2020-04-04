@@ -21,6 +21,17 @@ alias edit='emacs -nw'
 alias clean='rm *~'
 
 ###
+# Directory Shortcuts
+#
+alias HOME='cd
+alias home='HOME'
+
+###
+# Helpful little bits
+#
+alias make_exec='chomd +x'
+
+###
 # git stuff
 #
 alias git_tree='git log --graph --pretty=oneline --abbrev-commit'
