@@ -20,6 +20,34 @@
 ;(setq transient-mark-mode t)
 ;;
 ;; default to better frame titles
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-archives
+   (quote
+    (("gnu" . "https://elpa.gnu.org/packages/"))))
+ '(package-selected-packages (quote (ledger-mode auto-complete)))
+ '(org-checkbox-hierarchical-statistics nil))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ ;;'(font-lock-comment-face ((t (:foreground "red"))))
+ )
+
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (setq frame-title-format
       (concat  "%b - emacs@" (system-name)))
 ;;
@@ -80,7 +108,6 @@
 	  '(lambda()
 	     (toggle-truncate-lines)))
 
-
 ;; Evil Mode stuff
 ;;
 ;; Package declaration
@@ -121,7 +148,7 @@
 (load "~/.emacs.d/work_config.el" t)
 
 ;; Auto-complete
-;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; TODO: ?
 
 ;; Screenwriter Mode
 ;; - Was playing with this. I'll remove it later.
@@ -136,24 +163,6 @@
 ;;(require 'fountain-mode)
 ;;(setq auto-mode-alist (cons '("\\.scp" . fountain-mode) auto-mode-alist))
 ;;(setq auto-mode-alist (cons '("\\.screenplay" . fountain-mode) auto-mode-alist))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-checkbox-hierarchical-statistics nil)
- '(package-archives
-   (quote
-    (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "http://stable.melpa.org/packages/"))))
- '(package-selected-packages (quote (ledger-mode auto-complete))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- ;;'(font-lock-comment-face ((t (:foreground "red"))))
- )
 
 ;; Ledger-Mode
 (autoload 'ledger-mode "ledger-mode" "A major mode for Ledger" t)
