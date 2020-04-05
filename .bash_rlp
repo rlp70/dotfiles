@@ -23,7 +23,7 @@ alias clean='rm *~'
 ###
 # Directory Shortcuts
 #
-alias HOME='cd
+alias HOME='cd'
 alias home='HOME'
 
 ###
