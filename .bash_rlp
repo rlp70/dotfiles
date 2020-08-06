@@ -18,7 +18,7 @@
 alias ..='cd ../'
 alias peek='pushd'
 alias edit='emacs -nw'
-alias clean='rm *~'
+alias clean='rm *~;'
 
 ###
 # Directory Shortcuts
