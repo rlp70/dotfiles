@@ -63,6 +63,9 @@
 
 ;; My own personal emacs quirks
 ;;
+;; First, turn off that damn bell
+(setq ring-bell-function 'ignore)
+;;
 ;; This is how I like my window-cycling
 (global-set-key (kbd "C-c <left>")    'windmove-left)
 (global-set-key (kbd "C-c <right>")   'windmove-right)
